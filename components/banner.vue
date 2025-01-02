@@ -38,6 +38,7 @@ const banners = [
 ];
 
 onMounted(() => {
+  gsap.registerPlugin(ScrollTrigger);
   const bannerItems = document.querySelectorAll('.banner-item');
 
   if (bannerItems.length > 0) {
