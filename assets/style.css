@@ -1,0 +1,31 @@
+body{
+    @apply overflow-x-hidden text-neutral-700;
+
+}
+.home-page {
+    @apply bg-gradient-to-t from-black to-gray-900;
+  }
+.bg-dark{
+    @apply bg-gradient-to-t from-black to-gray-900;
+}
+
+ /* scrollbar */
+  /* width */
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+     @apply bg-neutral-100;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    @apply bg-red-400 rounded-3xl
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary
+  }
