@@ -29,6 +29,7 @@
 <script setup lang="ts">
 import { onMounted } from 'vue';
 import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const banners = [
   './img-banner1.png',

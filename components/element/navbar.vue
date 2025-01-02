@@ -84,7 +84,6 @@ const closeMegaMenu = (item) => {
 
 onMounted(() => {
   window.addEventListener('scroll', handleScroll)
-  animationShowMenu()
 })
 onBeforeUnmount(() => {
   window.removeEventListener('scroll', handleScroll)
