@@ -42,7 +42,7 @@
 </template>
 
 <script lang="ts" setup>
-import gsap from 'gsap';
+
 const { openSearch } = useOpenSearch()
 const { menu } = useMenu()
 const menuChildren = ref([])
@@ -81,9 +81,7 @@ const closeMegaMenu = (item) => {
   }
 }
 
-const animationShowMenu = () => {
-  gsap.fromTo('.show-dropdown .mega-menu-wrapper', { y: -100 }, { y: 0, duration: 1, ease: "power2.out" })
-}
+
 onMounted(() => {
   window.addEventListener('scroll', handleScroll)
   animationShowMenu()
