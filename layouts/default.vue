@@ -3,6 +3,7 @@
    <ElementNavbar class="" />
    <ElementMobileNavbar class="" />
     <slot />
+    <ElementFooter />
   </div>
 </template>
 
