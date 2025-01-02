@@ -13,7 +13,7 @@ import { ref, onMounted } from 'vue';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-gsap.registerPlugin(ScrollTrigger);
+
 
 type Props = {
   no: number;
@@ -28,6 +28,7 @@ const statisticEl = ref<HTMLElement | null>(null);
 const numberEl = ref<HTMLElement | null>(null);
 
 onMounted(() => {
+  gsap.registerPlugin(ScrollTrigger);
   if (numberEl.value && statisticEl.value) {
     gsap.fromTo(
       numberEl.value,

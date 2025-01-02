@@ -31,9 +31,10 @@ type Props = {
 }
 const props = defineProps<Props>()
 
-gsap.registerPlugin(ScrollTrigger)
+
 
 onMounted(() => {
+  gsap.registerPlugin(ScrollTrigger)
   const items = gsap.utils.toArray('.featured-item') as HTMLElement[]
 
   items.forEach((item) => {
