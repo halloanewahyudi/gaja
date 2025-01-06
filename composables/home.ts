@@ -36,7 +36,7 @@ export const useHome = () => {
     },
     {
       no: 5,
-      title: '5 Hectares',
+      title: 'Hectares',
       suffix: 'Plant <br> Land Area',
     },
     {
