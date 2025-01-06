@@ -15,6 +15,7 @@
               </li>
             </ul>
           </div>
+          <div class="flex items-center gap-4">
           <div class="flex items-center gap-4 border border-neutral-200 rounded-full bg-white overflow-hidden">
             <div v-if="openSearch" class="  bg-white">
               <input type="search" class="w-full py-2 px-6 rounded-lg focus:outline-none text-neutral-600" placeholder="Search">
@@ -24,6 +25,8 @@
               <IconsSearch />
             </button>
           </div>
+          <button class="rounded-full w-10 h-10 bg-primary text-white flex justify-center items-center border border-neutral-200"><IconsGlobe class="w-6 h-6" /></button>
+        </div>
         </nav>
       </div>
     </div>

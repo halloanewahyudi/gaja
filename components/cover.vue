@@ -12,7 +12,7 @@
     overlay="linear-gradient(0deg, rgba(0,0,0,0.14049369747899154) 0%, rgba(0,0,0,0.4654236694677871) 48%, rgba(0,0,0,0.6334908963585435) 100%)" >
   
       <div class="relative flex flex-col justify-end items-center w-full max-w-xl text-center mx-auto h-full py-20 px-6">
-        <h1 class="text-3xl  font-semibold">Provide design, manufacturing, supply, and installation for FRP Pipes and Fittings</h1>
+        <h1 class="text-3xl  font-semibold">a Total Solution Provider in FRP Products to Serve Industrial Needs</h1>
            <IconsArrowDownRounded class="animate-bounce mt-4 text-3xl" />
       </div>
  </video-background>

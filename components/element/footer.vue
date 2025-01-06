@@ -20,6 +20,11 @@
               <IconsMail class="w-4 h-4" /> {{item.contact.email}}
               </span>
            </div>
+           <div v-if="item.certificate" class="flex items-center gap-4 mt-10">
+            <div class="" v-for="certificate in item.certificate" :key="certificate">
+              <img :src="certificate" alt="" class="w-12">
+            </div>
+           </div>
          </div>
         </div>
       
@@ -35,7 +40,6 @@
                 <IconsLinkedin class="w-5 h-5 cursor-pointer" />
                 <IconsYoutube class="w-5 h-5 cursor-pointer" />
               </div>
-   
       </div>
     </div>
   </div>

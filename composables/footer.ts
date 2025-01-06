@@ -15,6 +15,7 @@ export const useFooter = () => {
         instagram: 'https://www.instagram.com',
         linkedin: 'https://www.linkedin.com'
       }
+      
     },
     {
       col: 2,
@@ -32,7 +33,8 @@ export const useFooter = () => {
       links: [
         { name: 'Policy & Capability', link: '#' },
         { name: 'Awwards & Acreditation', link: '#' }
-      ]
+      ],
+      certificate: ['cer-1.png', 'cer-2.png', 'cer-3.png']
     },
     {
       col: 4,

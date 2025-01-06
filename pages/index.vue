@@ -12,7 +12,7 @@
       <div class="container">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div class="" v-for="item in counter" :key="item">
-            <ElementStatistic :title="item.title" :no="item.no" :suffix="item.suffix"></ElementStatistic>
+            <ElementStatistic :title="item.title" :no="`${item.no}`"  :suffix="item.suffix"></ElementStatistic>
           </div>
         </div>
       </div>

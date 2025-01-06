@@ -1,14 +1,16 @@
 <template>
   <div ref="statisticEl" class="statistic-item">
     <div class="flex items-end gap-2 text-primary">
-      <div class="number font-medium text-3xl lg:text-7xl" ref="numberEl">{{ props.no }}</div>
-      <div class="suffix text-2xl">{{ props.suffix }}</div>
+  
+      <div class="number font-medium text-3xl lg:text-7xl" ref="numberEl">{{props.no }}</div>
+      <div class="suffix text-xl" v-html="props.suffix" ></div>
     </div>
-    <p class="title text-lg mt-2">{{ props.title }}</p>
+    <p class="title text-lg mt-2" v-html="props.title"></p>
   </div>
 </template>
 
 <script setup lang="ts">
+
 import { ref, onMounted } from 'vue';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -16,7 +18,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 
 type Props = {
-  no: number;
+  no: string;
   suffix: string;
   title: string;
 };

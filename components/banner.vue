@@ -1,5 +1,5 @@
 <template>
-  <div class="banner relative overflow-hidden w-full h-[340px] lg:h-[560px]">
+  <div class="banner relative overflow-x-hidden w-full h-[670px]">
     <div class="layer  absolute top-0 left-0 w-full h-full z-10"></div>
     <div class="banner-text absolute top-10 left-10 z-20 text-white flex flex-col gap-4">
         <h4 class="text-2xl font-semibold lg:text-4xl ">#1 <br> FRP molded <br> grating manufacturer <br> in Indonesia </h4>
@@ -23,6 +23,17 @@
         />
       </div>
     </div>
+    <div class="max-w-screen-lg  absolute left-1/2  -translate-x-1/2 z-50 w-full  bottom-0 p-6 lg:pb-10 lg:mt-10 mt-16 text-white  " >
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-10 text-center justify-center">
+            <div v-for="item in menuKurang" class="fle flex-col gap-4 justify-center items-center" >
+              <img src="/product-gaja2.png" alt="" class="w-10 mx-auto">
+              <p class="lg:text-lg font-medium">
+                {{ item.name }}
+              </p>
+              
+            </div>
+          </div>
+        </div>
   </div>
 </template>
 
@@ -30,6 +41,13 @@
 import { onMounted } from 'vue';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Menu from './icons/menu.vue';
+const {menu} = useMenu()
+
+const menuKurang = computed(() => {
+
+  return menu.value[2].children.slice(0,8)
+})
 
 const banners = [
   './img-banner1.png',
