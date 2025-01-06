@@ -25,22 +25,22 @@ export const useHome = () => {
 
   const counter = ref([
     {
-      no: 250,
+      no: 25000,
       title: 'Kilometers and still growing',
       suffix: 'Produced <br> Pipes',
     },
     {
-      no: 210,
+      no: 210000,
       title: 'Cubic meters and still growing',
       suffix: 'Fabricated <br> Onsite',
     },
     {
-      no: 345,
+      no: 34535,
       title: 'Square meters',
       suffix: 'Plant <br> Land Area',
     },
     {
-      no:  `${50}++`,
+      no: 500,
       title: 'Companies',
       suffix: 'Key <br> Partners',
     }
