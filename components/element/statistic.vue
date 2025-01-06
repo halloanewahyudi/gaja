@@ -2,13 +2,13 @@
   <div ref="statisticEl" class="statistic-item">
     <div class="flex flex-wrap items-end gap-2 text-primary">
       <div
-        class="number font-medium text-6xl lg:text-8xl "
+        class="number font-medium text-4xl lg:text-6xl "
         ref="numberEl"
         v-html="formattedNumber"
       ></div>
       <div class="suffix text-lg" v-html="props.suffix"></div>
     </div>
-    <p class="title text-xl mt-2" v-html="props.title"></p>
+    <p class="title text-lg mt-1 font-medium" v-html="props.title"></p>
   </div>
 </template>
 

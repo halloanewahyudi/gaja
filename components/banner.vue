@@ -1,9 +1,9 @@
 <template>
-  <div class="banner relative overflow-x-hidden w-full h-[580px]">
+  <div class="banner relative overflow-x-hidden w-full h-full min-h-screen lg:h-[650px]">
     <div class="layer  absolute top-0 left-0 w-full h-full z-10"></div>
     <div class="banner-text absolute top-10 left-10 z-20 text-white flex flex-col gap-4">
-      <p class="leading-none">Gaja Fiberglass</p>
-        <h4 class="text-2xl font-semibold lg:text-4xl ">Our Product </h4>
+      <p class="text-xl text-neutral-100">Over 15 years of experience as a <br> FRP engineering and manufacturing company</p>
+        <h4 class="text-3xl font-bold lg:text-6xl ">Our Product </h4>
       <NuxtLink to="/"
           class="flex items-center gap-2 p-2 rounded-lg hover:bg-[#ffffff54] duration-200 max-w-max"> Learn More
           <span class="rounded-full w-5 h-5 border border-white flex justify-center items-center">
@@ -24,7 +24,7 @@
         />
       </div>
     </div>
-    <div class="max-w-screen-lg border-y border-neutral-500  absolute left-1/2  -translate-x-1/2 z-50 w-full  bottom-0 p-6 lg:py-10 lg:mt-10 mt-16 mb-16 text-white  " >
+    <div class="max-w-screen-lg border-y border-neutral-500  absolute left-1/2  -translate-x-1/2 z-50 w-full  bottom-0 p-6 lg:py-10  mt-16 mb-16 text-white  " >
         
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-10 text-center justify-center">
             <button v-for="item in menuKurang" class="fle flex-col gap-4 justify-center items-center group" >

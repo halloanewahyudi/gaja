@@ -8,10 +8,10 @@
         </div>
       </div>
     </section>
-    <section class="bg-neutral-100 py-20">
+    <section class="bg-neutral-50 py-20">
       <div class="container">
-        <div class="grid grid-cols-1 md:grid-cols-2 justify-center gap-6 lg:gap-10">
-          <div class="pl-8 p-6 border border-l-4  lg:border-l-8 border-neutral-200 border-l-red-400 bg-white" v-for="item in counter" :key="item">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-between gap-4">
+          <div class="" v-for="item in counter" :key="item">
             <ElementStatistic :title="item.title" :no="`${item.no}`"  :suffix="item.suffix"></ElementStatistic>
           </div>
         </div>
