@@ -22,7 +22,8 @@
            </div>
            <div v-if="item.certificate" class="flex flex-wrap items-center lg:justify-end gap-4">
             <div class="" v-for="certificate in item.certificate" :key="certificate">
-              <img :src="certificate" alt="" class="w-24 h-24 shrink-0 p-1 border border-white border-opacity-55 rounded-full bg-white bg-opacity-20">
+              <!-- <img :src="certificate" alt="" class="w-24 h-24 shrink-0 p-1 border border-white border-opacity-55 rounded-full bg-white bg-opacity-20"> -->
+               <img :src="certificate" alt="" class="w-40">
             </div>
            </div>
          </div>
