@@ -30,12 +30,12 @@ export const useHome = () => {
       suffix: 'Produced <br> Pipes',
     },
     {
-      no: 210000,
+      no: 10000,
       title: 'Cubic meters and still growing',
       suffix: 'Fabricated <br> Onsite',
     },
     {
-      no: 34535,
+      no: 34500,
       title: 'Square meters',
       suffix: 'Plant <br> Land Area',
     },
