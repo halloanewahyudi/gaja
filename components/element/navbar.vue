@@ -1,13 +1,13 @@
 <template>
   <header :class="{ 'show-dropdown': showMegaMenu && menuChildren.length > 0 }"
-    class="hidden lg:block fixed top-0 left-0 w-full h-[90px] z-50 ">
+    class="hidden lg:block fixed top-0 left-0 w-full h-[90px] z-[1000] ">
     <div ref="navbar" class="navbar ">
       <div class="container">
-        <nav class="flex items-center gap-6 lg:gap-10">
-          <div class="logo">
+        <nav class="flex  items-center gap-6 lg:gap-10">
+          <div class="logo mr-auto">
             <img src="/logo.png" alt="" class="w-[260px]">
           </div>
-          <div class="menu mr-auto ">
+          <div class="menu  ">
             <ul class="lg:flex items-center gap-4  ">
               <li @mouseenter="handleMegaMenu(item)" @mouseleave="closeMegaMenu(item)" v-for="(item, index) in menu"
                 :key="item" class="relative group" :class="{ 'mega-menu': item.children }">

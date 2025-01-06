@@ -1,9 +1,10 @@
 <template>
-  <div class="banner relative overflow-x-hidden w-full h-[670px]">
+  <div class="banner relative overflow-x-hidden w-full h-[580px]">
     <div class="layer  absolute top-0 left-0 w-full h-full z-10"></div>
     <div class="banner-text absolute top-10 left-10 z-20 text-white flex flex-col gap-4">
-        <h4 class="text-2xl font-semibold lg:text-4xl ">#1 <br> FRP molded <br> grating manufacturer <br> in Indonesia </h4>
-        <NuxtLink to="/"
+      <p class="leading-none">Gaja Fiberglass</p>
+        <h4 class="text-2xl font-semibold lg:text-4xl ">Our Product </h4>
+      <NuxtLink to="/"
           class="flex items-center gap-2 p-2 rounded-lg hover:bg-[#ffffff54] duration-200 max-w-max"> Learn More
           <span class="rounded-full w-5 h-5 border border-white flex justify-center items-center">
             <IconsChevronRight class="w-3 h-3" />
@@ -23,15 +24,16 @@
         />
       </div>
     </div>
-    <div class="max-w-screen-lg  absolute left-1/2  -translate-x-1/2 z-50 w-full  bottom-0 p-6 lg:pb-10 lg:mt-10 mt-16 text-white  " >
-          <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-10 text-center justify-center">
-            <div v-for="item in menuKurang" class="fle flex-col gap-4 justify-center items-center" >
-              <img src="/product-gaja2.png" alt="" class="w-10 mx-auto">
+    <div class="max-w-screen-lg border-y border-neutral-500  absolute left-1/2  -translate-x-1/2 z-50 w-full  bottom-0 p-6 lg:py-10 lg:mt-10 mt-16 mb-16 text-white  " >
+        
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-10 text-center justify-center">
+            <button v-for="item in menuKurang" class="fle flex-col gap-4 justify-center items-center group" >
+              <img src="/product-gaja2.png" alt="" class="w-10 opacity-75 mx-auto group-hover:scale-125  duration-300">
               <p class="lg:text-lg font-medium">
                 {{ item.name }}
               </p>
               
-            </div>
+            </button>
           </div>
         </div>
   </div>
