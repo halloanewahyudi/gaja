@@ -1,9 +1,12 @@
 <template>
   <div>
-    <NuxtLink :to="props.link" class="flex flex-col p-4 hover:bg-neutral-100">
-     <h4 class="text-lg">{{ props.name }}</h4>
-     <img v-if="props.image" :src="props.image" alt="" srcset="" class="hidden lg:block w-full h-280px object-cover">
-     <p v-if="props.description" class="text-sm text-neutral-600 hidden lg:block">{{ props.description }}</p>
+    <NuxtLink :to="props.link" class="flex flex-col p-4 gap-3 hover:bg-neutral-50 duration-300">
+     <h4 class="text-lg font-medium  ">{{ props.name }}</h4>
+     <div class="flex gap-2">
+      <img v-if="props.image" :src="props.image" alt="" srcset="" class="hidden lg:block w-20 h-20 object-cover">
+      <p v-if="props.description" class="text-sm text-neutral-600 hidden lg:block">{{ props.description }}</p>
+     </div>
+     
     </NuxtLink>
   </div>
 

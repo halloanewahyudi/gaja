@@ -10,6 +10,15 @@ export const useMenu = () => {
      slug:'company',
      link: '/',
      children: [
+      {
+        name: 'Company Overview',
+        slug:'company-overview',
+        link: '/'
+      },{
+        name:'Vision & Mission',
+        slug:'vision-mission',
+        link:'/'
+      },
        {
          name: 'Policy & Capability',
          slug:'policy-capability',
@@ -21,7 +30,7 @@ export const useMenu = () => {
          link: '/'
        }
      ],
-     class:'sub-menu'
+     class:'sub-menu mega-menu'
    },
    {
     name: 'Products',

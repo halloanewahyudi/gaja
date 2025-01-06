@@ -3,23 +3,23 @@ export const useHome = () => {
     {
       image: './tangki1.jpg',
       title: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
-      subtitle: 'Project  1',
+      subtitle: 'Project Category 1',
      
     },
     {
       image: './work.jpg',
       title: 'Expedita dolore voluptate ipsa recusandae optio saepe molestiae.',
-      subtitle: 'Project  2',
+      subtitle: 'Project Category 2',
     },
     {
       image: './city.jpg',
       title: 'Debitis explicabo aspernatur, error placeat consectetur repellat.',
-      subtitle: 'Project  3',
+      subtitle: 'Project Category 3',
     },
     {
       image: './cover.jpg',
       title: 'adipisci id ab maxime accusamus assumenda.',
-      subtitle: 'Project  4',
+      subtitle: 'Project Category 4',
     },
   ])
 
