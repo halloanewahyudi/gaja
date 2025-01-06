@@ -1,8 +1,8 @@
 <template>
   <div ref="statisticEl" class="statistic-item">
-    <div class="flex items-end gap-2 text-primary">
+    <div class="flex flex-wrap items-end gap-2 text-primary">
       <div
-        class="number font-medium text-3xl lg:text-6xl"
+        class="number font-medium text-6xl lg:text-8xl "
         ref="numberEl"
         v-html="formattedNumber"
       ></div>
