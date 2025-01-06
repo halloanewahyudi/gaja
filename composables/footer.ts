@@ -29,14 +29,14 @@ export const useFooter = () => {
     },
     {
       col: 3,
-      title: 'Company',
+    /*   title: 'Company',
       links: [
         { name: 'Policy & Capability', link: '#' },
         { name: 'Awwards & Acreditation', link: '#' }
-      ],
-      certificate: ['cer-1.png', 'cer-2.png', 'cer-3.png']
+      ], */
+      certificate: ['cer-1nc.png', 'cer-2nc.png', 'cer-3nc.png']
     },
-    {
+  /*   {
       col: 4,
       title: 'Products',
       links: [
@@ -50,7 +50,7 @@ export const useFooter = () => {
         { name: 'Skylight FRP Roof & Cladding', link: '#' },
         { name: 'Air Polutant System', link: '#' }
       ]
-    }
+    } */
   ])
   return {
     footerContent

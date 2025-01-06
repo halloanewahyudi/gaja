@@ -2,7 +2,7 @@
   <div class="pt-20 pb-5 text-neutral-200 text-sm">
     <div class="container">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="" v-for="item in footerContent" :key="item">
+        <div :class="item.certificate ? 'lg:col-span-2 ' : ''" v-for="item in footerContent" :key="item">
          <div>
            <h4 class="font-medium text-lg mb-2">{{ item.title }}</h4>
            <ul v-if="item.links" class="text-neutral-400">
@@ -20,9 +20,9 @@
               <IconsMail class="w-4 h-4" /> {{item.contact.email}}
               </span>
            </div>
-           <div v-if="item.certificate" class="flex items-center gap-4 mt-10">
+           <div v-if="item.certificate" class="flex flex-wrap items-center lg:justify-end gap-4">
             <div class="" v-for="certificate in item.certificate" :key="certificate">
-              <img :src="certificate" alt="" class="w-12">
+              <img :src="certificate" alt="" class="w-24 h-24 shrink-0 p-1 border border-white border-opacity-55 rounded-full bg-white bg-opacity-20">
             </div>
            </div>
          </div>
