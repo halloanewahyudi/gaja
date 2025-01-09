@@ -1,6 +1,6 @@
 <template>
   <div>
-    <TestNavbar class="text-white" />
+ 
    <ElementNavbar class="" />
    <ElementMobileNavbar class="" />
     <slot />
