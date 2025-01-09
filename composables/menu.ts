@@ -30,7 +30,8 @@ export const useMenu = () => {
          link: '/'
        }
      ],
-     class:'sub-menu mega-menu'
+     image: './tangki1.jpg',
+     class:'sub-menu image-menu'
    },
    {
     name: 'Products',

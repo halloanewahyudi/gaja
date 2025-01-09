@@ -8,8 +8,10 @@
             <img src="/logo.png" alt="" class="w-[260px]">
           </div>
           <div class="menu  ">
+          
             <ul class="lg:flex items-center gap-4  ">
-              <li @mouseenter="handleMegaMenu(item)" @mouseleave="closeMegaMenu(item)" v-for="(item, index) in menu"
+              <li  @mouseenter="handleMegaMenu(item)"
+              @mouseleave="showMegaMenu = false" v-for="(item, index) in menu"
                 :key="item" class="relative group" :class="{ 'mega-menu': item.children }">
                 <NuxtLink :to="item.link" class="" :class="{ 'active': index === 0 }">{{ item.name }}</NuxtLink>
               </li>
@@ -30,8 +32,10 @@
         </nav>
       </div>
     </div>
-    <div ref="megaMenu" class="mega-menu-wrapper" :class="parentClass">
+    
+    <div ref="megaMenu" class="mega-menu-wrapper" :class="parentClass" @mouseenter="showMegaMenu = true" @mouseleave="showMegaMenu = false" >
       <div class="sub-menu-content container bg-white p-6">
+        <img v-if="menuImage" :src="menuImage" alt="" srcset="" class="w-[300px] min-h-full object-cover ">
         <ul>
           <li v-for="item in menuChildren" :key="item">
             <ElementMenuItem :name="item.name" :link="item.link" :image="item.image" :description="item.description" />
@@ -39,12 +43,14 @@
         </ul>
       </div>
     </div>
+
   </header>
 
 
 </template>
 
 <script lang="ts" setup>
+import gsap from 'gsap';
 
 const { openSearch } = useOpenSearch()
 const { menu } = useMenu()
@@ -53,6 +59,7 @@ const parentClass = ref('')
 const navbar = ref(null)
 const megaMenu = ref(null)
 const showMegaMenu = ref(false)
+const menuImage = ref(null)
 
 const handleScroll = () => {
   if (navbar.value) {
@@ -64,25 +71,22 @@ const handleScroll = () => {
   }
 }
 
-const handleMegaMenu = (item) => {
-  menuChildren.value = item.children
-  parentClass.value = item.class
-  if (menuChildren.value.length > 0) {
-    showMegaMenu.value = true
-  } else {
-    showMegaMenu.value = false
-  }
-  //  console.log(menuChildren.value)
-}
 
-const closeMegaMenu = (item) => {
-  // jika jika parent menu tidak ada menu children maka megamenu close
-  if (item.children.length > 0) {
-    setTimeout(() => {
-      showMegaMenu.value = false
-    }, 1000);
+const handleMegaMenu = (item) => {
+  menuChildren.value = item.children || [];
+  parentClass.value = item.class || '';
+  menuImage.value = item.image || null;
+
+  if (item.children && menuChildren.value.length > 0) {
+    showMegaMenu.value = true;
+    gsap.fromTo(
+      megaMenu.value,
+      { opacity: 0, y: 50 },
+      { opacity: 1, y: 0, duration: 0.2, ease: 'cubic-bezier(0.68, -0.55, 0.265, 1.55)' }
+    );
   }
-}
+};
+
 
 
 onMounted(() => {
@@ -125,7 +129,7 @@ header .menu a {
 }
 
 .menu li>a {
-  @apply h-[70px] flex justify-center items-center;
+  @apply h-[70px] flex justify-center items-center ;
 }
 
 .menu li a::after {
@@ -166,4 +170,16 @@ header .menu a {
   @apply overflow-y-auto;
 
 }
+.sub-menu.image-menu .sub-menu-content{
+   @apply grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6;
+}
+.sub-menu.image-menu .sub-menu-content img{
+  @apply w-full md:col-span-1 lg:col-span-2;
+}
+.sub-menu.image-menu .sub-menu-content ul{
+  @apply md:col-span-2 lg:col-span-4;
+}
+.sub-menu.image-menu .sub-menu-content ul li a{
+  @apply font-normal p-1 leading-none ;
+  }
 </style>
